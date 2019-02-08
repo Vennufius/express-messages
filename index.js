@@ -26,11 +26,11 @@ module.exports = function (req, res) {
         types.forEach(function (type) {
           var msgs = flash[type];
           if (msgs) {
-            buf.push('  <ul class="' + type + '">');
+            buf.push('  <div class="alert alert-' + type + '">');
             msgs.forEach(function (msg) {
-              buf.push('    <li>' + msg + '</li>');
+              buf.push('    ' + msg);
             });
-            buf.push('  </ul>');
+            buf.push('  </div>');
           }
         });
         buf.push('</div>');
